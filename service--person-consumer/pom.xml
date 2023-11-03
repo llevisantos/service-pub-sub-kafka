@@ -6,7 +6,7 @@
 
     <groupId>org.example</groupId>
     <artifactId>service--person-consumer</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
 
     <name>service--person-consumer</name>
     <description>Minimum kafka Consumer service with spring and Java</description>
