@@ -1,5 +1,57 @@
-version: '2'
+version: '3'
+
 services:
+  sonarqube:
+    build: ./sonar
+    ports:
+      - "9000:9000"
+    networks:
+      - sonarnet
+    volumes:
+      - sonarqube_conf:/opt/sonarqube/conf
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+      - ./sonar/scripts/:/opt/sonarqube/scripts
+      - /opt/sonarqube/bin
+    healthcheck:
+      test: "curl -s -X GET localhost:9000/api/system/status"
+      interval: 5s
+      timeout: 4s
+      retries: 10
+    entrypoint: ["bash", "./scripts/entrypoint.bash"]
+
+  mongo:
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: adminMongo
+      MONGO_INITDB_DATABASE: engdevelop
+    volumes:
+      - ./mongodb/charge_mongo_data_test.js:/docker-entrypoint-initdb.d/config_mongo_user.sh
+      - ./mongodb/charge_mongo_data_test.js:/docker-entrypoint-initdb.d/charge_mongo_data_test.js:ro
+      - mongo-volume:/data/db
+    ports:
+      - 27017:27017
+    restart: unless-stopped
+
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8086:8081
+    restart: unless-stopped
+    environment:
+      ME_CONFIG_BASICAUTH_USERNAME: adminDev
+      ME_CONFIG_BASICAUTH_PASSWORD: adminMongoExpress
+      ME_CONFIG_MONGODB_PORT: 27017
+      ME_CONFIG_MONGODB_ENABLE_ADMIN: 'true'
+      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
+      ME_CONFIG_MONGODB_ADMINPASSWORD: adminMongo
+      ME_CONFIG_MONGODB_SERVER: mongo
+    links:
+      - mongo
+    depends_on:
+      - mongo
+
   zookeeper:
     image: confluentinc/cp-zookeeper:7.1.1
     hostname: zookeeper
@@ -174,3 +226,14 @@ services:
       KAFKA_REST_BOOTSTRAP_SERVERS: 'broker:29092'
       KAFKA_REST_LISTENERS: "http://0.0.0.0:8082"
       KAFKA_REST_SCHEMA_REGISTRY_URL: 'http://schema-registry:8081'
+
+networks:
+  sonarnet:
+    driver: bridge
+
+volumes:
+  mongo-volume:
+  sonarqube_conf:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_bundled-plugins:
