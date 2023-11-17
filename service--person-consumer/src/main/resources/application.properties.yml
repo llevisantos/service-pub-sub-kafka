@@ -1,0 +1,11 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: "@project.name@"
+    version: "@project.version@"
+    description: "@project.description"
+
+  kafka:
+    bootstrap-servers: localhost:29092

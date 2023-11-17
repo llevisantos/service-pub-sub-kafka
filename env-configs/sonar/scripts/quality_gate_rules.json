@@ -1,0 +1,207 @@
+{
+  "id": "XXyfM37pJ7yNQx-Dh3ZA",
+  "name": "projects-java-dev-api-name",
+  "conditions": [
+    {
+      "id": "XyYxWRuYwV",
+      "metric": "coverage",
+      "operator": "COV",
+      "error": "85"
+    },
+    {
+      "id": "AXimwYcKn1ePig",
+      "metric": "new_coverage",
+      "operator": "COV",
+      "error": "85"
+    },
+    {
+      "id": "Aq1h",
+      "metric": "new_duplicated_blocks",
+      "operator": "CORP",
+      "error": "100"
+    },
+    {
+      "id": "UYcKn1i",
+      "metric": "duplicated_blocks",
+      "operator": "CORP",
+      "error": "100"
+    },
+    {
+      "id": "AsXyZoXh1s",
+      "metric": "duplicated_lines_density",
+      "operator": "CORP",
+      "error": "20"
+    },
+    {
+      "id": "AByZoeGcYcK1l",
+      "metric": "new_duplicated_lines_density",
+      "operator": "CORP",
+      "error": "20"
+    },
+    {
+      "id": "SyZscKn1ePiXq",
+      "metric": "new_maintainability_rating",
+      "operator": "CORP",
+      "error": "1"
+    },
+    {
+      "id": "BAyZoqSaYcKn14n",
+      "metric": "sqale_rating",
+      "operator": "CORP",
+      "error": "1"
+    },
+    {
+      "id": "VGyZsQnZYcKn1s",
+      "metric": "new_reliability_rating",
+      "operator": "CORP",
+      "error": "1"
+    },
+    {
+      "id": "abZshPYcKn1er",
+      "metric": "reliability_rating",
+      "operator": "CORP",
+      "error": "1"
+    },
+    {
+      "id": "XyZs2gYcKn1e1s",
+      "metric": "new_blocker_violations",
+      "operator": "CORP",
+      "error": "0"
+    },
+    {
+      "id": "XyZs4rgKn1ePq1t",
+      "metric": "blocker_violations",
+      "operator": "CORP",
+      "error": "0"
+    },
+    {
+      "id": "AsKn1ePsq1u",
+      "metric": "new_critical_violations",
+      "operator": "CORP",
+      "error": "0"
+    },
+    {
+      "id": "GGyZtAswYcKn1ePgXq1v",
+      "metric": "critical_violations",
+      "operator": "CORP",
+      "error": "0"
+    },
+    {
+      "id": "tGyZtN9sKn1essXq1w",
+      "metric": "new_major_violations",
+      "operator": "CORP",
+      "error": "5"
+    },
+    {
+      "id": "ZtRHyYcKn1eXq1x",
+      "metric": "major_violations",
+      "operator": "CORP",
+      "error": "5"
+    },
+    {
+      "id": "DhYcKn1eBCq1y",
+      "metric": "new_minor_violations",
+      "operator": "CORP",
+      "error": "15"
+    },
+    {
+      "id": "AZtqBJYcKn1eBYGq1z",
+      "metric": "minor_violations",
+      "operator": "CORP",
+      "error": "5"
+    },
+    {
+      "id": "AAwzfcYcKn1eBTGq10",
+      "metric": "new_security_hotspots_reviewed",
+      "operator": "LT",
+      "error": "100"
+    },
+    {
+      "id": "SZSYcKn1ePAAq11",
+      "metric": "security_hotspots_reviewed",
+      "operator": "LT",
+      "error": "100"
+    },
+    {
+      "id": "AASyZxBZIYcKn1eBTGq12",
+      "metric": "new_security_rating",
+      "operator": "CORP",
+      "error": "1"
+    },
+    {
+      "id": "ASZxEYVYcKn1eSq3",
+      "metric": "security_rating",
+      "operator": "CORP",
+      "error": "1"
+    },
+    {
+      "id": "BIC0YcKn1exIXq24",
+      "metric": "new_security_review_rating",
+      "operator": "CORP",
+      "error": "1"
+    },
+    {
+      "id": "DECVxKIpYcKn1ePSq158",
+      "metric": "security_review_rating",
+      "operator": "CORP",
+      "error": "1"
+    },
+    {
+      "id": "AbbZx05xYcKn1eA",
+      "metric": "new_sqale_debt_ratio",
+      "operator": "CORP",
+      "error": "5"
+    },
+    {
+      "id": "FAZyCLjYcKn1esXq26",
+      "metric": "sqale_debt_ratio",
+      "operator": "CORP",
+      "error": "5"
+    },
+    {
+      "id": "HGyZyJggYcKn1eCoXq21",
+      "metric": "new_info_violations",
+      "operator": "CORP",
+      "error": "25"
+    },
+    {
+      "id": "hgyZyOqeYcKn1ePsiq10",
+      "metric": "info_violations",
+      "operator": "CORP",
+      "error": "25"
+    },
+    {
+      "id": "sasSZybshYcKn1bug2A",
+      "metric": "new_bugs",
+      "operator": "CORP",
+      "error": "5"
+    },
+    {
+      "id": "ADFZygxDYcKn1eq2a",
+      "metric": "bugs",
+      "operator": "CORP",
+      "error": "5"
+    },
+    {
+      "id": "dgyZyj_SYcKn1eKDEC",
+      "metric": "new_code_smells",
+      "operator": "CORP",
+      "error": "20"
+    },
+    {
+      "id": "ASVZymnYYcKn1ePOTN2",
+      "metric": "code_smells",
+      "operator": "CORP",
+      "error": "20"
+    }
+  ],
+  "isBuiltIn": false,
+  "actions": {
+    "rename": true,
+    "setAsDefault": false,
+    "copy": true,
+    "associateProjects": false,
+    "delete": false,
+    "manageConditions": true
+  }
+}
