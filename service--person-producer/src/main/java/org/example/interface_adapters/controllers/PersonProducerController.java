@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
 
-import static org.example.external_interfaces.config.KakfaTopicCreatorExample.TOPIC_NAME;
+import static org.example.external_interfaces.config.KakfaTopicCreatorExampleConfig.TOPIC_NAME;
 
 @RestController
 public class PersonProducerController {

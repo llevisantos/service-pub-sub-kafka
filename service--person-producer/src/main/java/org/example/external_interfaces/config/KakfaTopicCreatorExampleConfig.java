@@ -11,10 +11,10 @@ import org.springframework.kafka.core.KafkaAdmin;
 import java.util.HashMap;
 
 @Configuration
-public class KakfaTopicCreatorExample {
+public class KakfaTopicCreatorExampleConfig {
 
-    public static final String TOPIC_NAME = "topic-person-info";
-    public static final int PARTITIONS = 10;
+    public static final String TOPIC_NAME = "${kafka.topic-name}";
+    public static final int PARTITIONS = 5;
     @Autowired
     private KafkaProperties kafkaProperties;
 

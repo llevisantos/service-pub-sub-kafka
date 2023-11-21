@@ -9,3 +9,5 @@ spring:
 
   kafka:
     bootstrap-servers: localhost:29092
+    topic-name: "topic-person-info"
+    group-id: "service-person"
