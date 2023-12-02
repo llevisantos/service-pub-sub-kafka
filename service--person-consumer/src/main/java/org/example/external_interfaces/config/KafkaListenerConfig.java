@@ -14,11 +14,13 @@ public class KafkaListenerConfig {
     @KafkaListener(topics = "topic-person-info", groupId = "service-person")
     public void listen(String mensage,
                        @Header(KafkaHeaders.RECEIVED_TOPIC) String topic,
-                       @Header(KafkaHeaders.OFFSET) String offset) {
+                       @Header(KafkaHeaders.OFFSET) String offset,
+                       @Header(KafkaHeaders.RECEIVED_PARTITION) int partition) {
         log.info("Thread: {}", Thread.currentThread().getId());
         log.info("Received topic: {}", topic);
         log.info("Received: {}", mensage);
         log.info("Offiset: {}", offset);
+        log.info("Partition ID: {}", partition);
     }
 
 }

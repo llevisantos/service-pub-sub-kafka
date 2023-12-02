@@ -18,7 +18,7 @@ public class PersonProducerController {
 
     @GetMapping("send")
     public ResponseEntity<?> send(){
-        kafkaTemplate.send(TOPIC_NAME, "Envio de:" + LocalDateTime.now());
+        kafkaTemplate.send(TOPIC_NAME, "Send mensage:" + LocalDateTime.now());
         return ResponseEntity.ok().build();
     }
 }
