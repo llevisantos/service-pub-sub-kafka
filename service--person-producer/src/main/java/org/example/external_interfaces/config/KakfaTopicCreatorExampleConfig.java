@@ -13,8 +13,9 @@ import java.util.HashMap;
 @Configuration
 public class KakfaTopicCreatorExampleConfig {
 
-    public static final String TOPIC_NAME = "${kafka.topic-name}";
+    public static final String TOPIC_NAME = "topic-person-info";
     public static final int PARTITIONS = 5;
+
     @Autowired
     private KafkaProperties kafkaProperties;
 

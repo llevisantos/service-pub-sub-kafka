@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class KafkaListenerConfig {
 
-    @KafkaListener(topics = "${kafka.topic-name}", groupId = "${kafka.group-id}")
+    @KafkaListener(topics = "topic-person-info", groupId = "service-person")
     public void listen(String mensage,
                        @Header(KafkaHeaders.RECEIVED_TOPIC) String topic,
                        @Header(KafkaHeaders.OFFSET) String offset) {
